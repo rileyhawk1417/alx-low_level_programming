@@ -12,8 +12,6 @@ int main(void)
 {
 int val;
 char az[27] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-char q[1] = "q";
-char e[1] = "e";
 int arrayLength = sizeof(az) / sizeof(az[0]);
 for (val = 0; val < arrayLength; val++)
 if ((az[val] != 'Q') && (az[val] != 'E'))

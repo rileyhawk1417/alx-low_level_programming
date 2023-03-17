@@ -12,8 +12,7 @@ int main(void)
 {
 int val;
 char az[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-int arrayLength = sizeof(az) / sizeof(az[0]) + 1;
-for (val = arrayLength; val >= 0; val--)
+for (val = 27; val >= 0; val--)
 putchar(tolower(az[val]));
 
 putchar('\n');
