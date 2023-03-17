@@ -3,11 +3,11 @@
 #include <string.h>
 
 /**
- * main - Entry point
- * Return: Always 0 meaning success
- * Description: Program prints the Alphabet
- * in upper case first then lower case
- */
+* main - Entry point
+* Return: Always 0 meaning success
+* Description: Program prints the Alphabet
+* in upper case first then lower case
+*/
 int main(void)
 {
 int a;
@@ -19,6 +19,5 @@ putchar(tolower(az[a]));
 for (a = 0; a < arrayLength; a++)
 putchar(az[a]);
 
-printf("\n");
 return (0);
 }

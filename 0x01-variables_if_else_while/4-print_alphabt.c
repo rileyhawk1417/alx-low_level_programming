@@ -16,6 +16,5 @@ int arrayLength = sizeof(az) / sizeof(az[0]);
 for (val = 0; val < arrayLength; val++)
 if ((az[val] != 'Q') && (az[val] != 'E'))
 putchar(tolower(az[val]));
-putchar('\n');
 return (0);
 }

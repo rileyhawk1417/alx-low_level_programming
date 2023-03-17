@@ -16,8 +16,7 @@ for (num = 0; num < 10; num++)
 {
 if (num < 9)
 {
-putchar((num % 10) + '0');
-putchar(',');
+    putchar((num % 10) + '0') + putchar(',');
 }
 else
 {

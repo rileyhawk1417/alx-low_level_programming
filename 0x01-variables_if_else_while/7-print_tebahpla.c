@@ -14,7 +14,5 @@ int val;
 char az[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 for (val = 27; val >= 0; val--)
 putchar(tolower(az[val]));
-
-putchar('\n');
 return (0);
 }

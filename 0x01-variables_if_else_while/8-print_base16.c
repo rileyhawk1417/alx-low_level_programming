@@ -18,7 +18,5 @@ for (letters = 'a'; letters < 'g'; letters++)
 {
 putchar(letters);
 }
-putchar('\n');
-
 return (0);
 }
