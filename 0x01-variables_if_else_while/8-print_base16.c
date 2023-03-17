@@ -10,7 +10,7 @@ int main(void)
 {
 int num = 0;
 char letters = 'a';
-for (num = 0; num < 9; num++)
+for (num = 0; num < 10; num++)
 {
 putchar((num % 10) + '0');
 }
@@ -18,5 +18,6 @@ for (letters = 'a'; letters < 'g'; letters++)
 {
 putchar(letters);
 }
+putchar('\n');
 return (0);
 }
