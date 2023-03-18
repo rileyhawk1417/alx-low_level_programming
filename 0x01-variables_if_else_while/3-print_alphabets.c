@@ -12,10 +12,10 @@ int main(void)
 {
 char a;
 /* Maybe concat the results? */
-for (a = 'a'; a <='z'; a++)
+for (a = 'a'; a <= 'z'; a++)
 putchar(tolower(a));
 
-for (a = 'A'; a <='Z'; a++)
+for (a = 'A'; a <= 'Z'; a++)
 putchar(a);
 putchar('\n');
 return (0);
