@@ -10,14 +10,13 @@
 */
 int main(void)
 {
-int a;
-char az[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-int arrayLength = sizeof(az) / sizeof(az[0]);
-for (a = 0; a < arrayLength; a++)
-putchar(tolower(az[a]));
+char a;
+/* Maybe concat the results? */
+for (a = 'a'; a <='z'; a++)
+putchar(tolower(a));
 
-for (a = 0; a < arrayLength; a++)
-putchar(az[a]);
-
+for (a = 'A'; a <='Z'; a++)
+putchar(a);
+putchar('\n');
 return (0);
 }
