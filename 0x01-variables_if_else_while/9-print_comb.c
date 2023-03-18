@@ -10,20 +10,15 @@
 
 int main(void)
 {
-int num = 0;
-
+int num;
 for (num = 0; num < 10; num++)
 {
-if (num < 9)
-{
-    putchar((num % 10) + '0') + putchar(',');
-}
-else
-{
 putchar((num % 10) + '0');
+if (num != 9)
+{
+putchar(',');
+putchar(' ');
 }
 }
-putchar('\n');
-
 return (0);
 }

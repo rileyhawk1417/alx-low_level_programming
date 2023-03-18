@@ -10,11 +10,10 @@
  */
 int main(void)
 {
-int val;
-char az[27] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-int arrayLength = sizeof(az) / sizeof(az[0]);
-for (val = 0; val < arrayLength; val++)
-if ((az[val] != 'Q') && (az[val] != 'E'))
-putchar(tolower(az[val]));
+char val;
+for (val = 'A'; val <= 'Z'; val++)
+if ((val != 'Q') && (val != 'E'))
+putchar(tolower(val));
+putchar('\n');
 return (0);
 }

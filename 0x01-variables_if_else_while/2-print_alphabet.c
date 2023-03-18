@@ -10,10 +10,9 @@
 */
 int main(void)
 {
-int a;
-char az[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-int arrayLength = sizeof(az) / sizeof(az[0]);
-for (a = 0; a < arrayLength; a++)
-printf("%c", tolower(az[a]));
+char a;
+for (a = 'A'; a <= 'Z'; a++)
+putchar(tolower(a));
+putchar('\n');
 return (0);
 }

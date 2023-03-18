@@ -10,9 +10,9 @@
  */
 int main(void)
 {
-int val;
-char az[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-for (val = 27; val >= 0; val--)
-putchar(tolower(az[val]));
+char val;
+for (val = 'Z'; val >= 'A'; val--)
+putchar(tolower(val));
+putchar('\n');
 return (0);
 }
