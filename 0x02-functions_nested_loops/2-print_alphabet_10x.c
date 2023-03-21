@@ -1,14 +1,20 @@
 #include "main.h"
 
 /**
- * main - Entry point
- * Return: Always 0 meaning success
- * Description: Program imports a function
- * from a local header file.
- */
-int main(void)
+* print_alphabet_x10 - Entry point
+* Description: Program prints the alphabet
+* x10 on the screen
+*/
+void print_alphabet_x10(void)
 {
-print_alphabet_x10();
+char letter;
+int num;
+for (num = 0; num <= 10; num++)
+{
+for (letter = 'a'; letter <= 'z'; letter++)
+{
+_putchar(letter);
+}
 _putchar('\n');
-return (0);
+}
 }
