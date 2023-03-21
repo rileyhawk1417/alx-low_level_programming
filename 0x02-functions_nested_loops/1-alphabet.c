@@ -6,7 +6,8 @@
  * Description: Program imports a function
  * from a local header file.
  */
-int main(void) {
+int main(void)
+{
 print_alphabet();
 _putchar('\n');
 return (0);
