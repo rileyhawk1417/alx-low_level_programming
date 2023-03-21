@@ -1,5 +1,6 @@
-#include <stdio.h>
+#include <unistd.h>
 #include "main.h"
+#include "_putchar.c"
 
 /**
 * main - Entry point
@@ -9,11 +10,13 @@
 int main(void)
 {
 int i;
-char text[] = "_putchar";
-for (i = 0; i < 9; i++)
+char txt[9] = "_putchar";
+for ( i = 0; i <= 9; i++)
 {
-_putchar(text[i]);
+_putchar(txt[i]);
 }
 _putchar('\n');
 return (0);
 }
+
+
