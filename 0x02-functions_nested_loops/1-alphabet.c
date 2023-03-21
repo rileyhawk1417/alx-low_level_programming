@@ -6,12 +6,6 @@
  * Description: Program imports a function
  * from a local header file.
  */
-int main(void)
-{
-print_alphabet();
-_putchar('\n');
-return (0);
-}
 
 void print_alphabet(void)
 {
