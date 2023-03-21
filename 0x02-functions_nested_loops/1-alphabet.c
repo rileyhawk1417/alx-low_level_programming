@@ -1,12 +1,10 @@
 #include "main.h"
 
 /**
- * main - Entry point
- * Return: Always 0 meaning success
- * Description: Program imports a function
- * from a local header file.
- */
-
+* print_alphabet - Entry point
+* Description: Program
+* prints the alphabet and is a library
+*/
 void print_alphabet(void)
 {
 char i;
@@ -14,4 +12,5 @@ for (i = 'a'; i <= 'z'; i++)
 {
 _putchar(i);
 }
+_putchar('\n');
 }
