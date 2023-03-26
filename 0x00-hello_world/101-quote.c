@@ -12,7 +12,7 @@ int main(void)
 {
 char txt[] = "and that piece of art is useful\" - Dora Korpar, 2015-10-19";
 int x = 0;
-for (x = 0; x < 70; x++)
+for (x = 0; x < 58; x++)
 {
 putchar(txt[x]);
 }
