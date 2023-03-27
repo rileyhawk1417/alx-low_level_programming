@@ -10,11 +10,13 @@
  * Return: returns a copy of the string
  * Description: The function returns a string in reverse
  */
-char *_strcpy(char *dest, char *src) {
-  int len = 0;
-  while (src[len] != '\0') {
-    len++;
-  }
-  stpcpy(dest, src);
-  return dest;
+char *_strcpy(char *dest, char *src)
+{
+int len = 0;
+while (src[len] != '\0')
+{
+len++;
+}
+stpcpy(dest, src);
+return dest;
 }

@@ -6,10 +6,12 @@
  * Return: returns the size of string
  * Description: The function returns the length of string
  */
-int _strlen(char *s) {
-  int x = 0;
-  while (s[x] != '\0') {
-    x++;
-  }
-  return x;
+int _strlen(char *s)
+{
+int x = 0;
+while (s[x] != '\0')
+{
+x++;
+}
+return x;
 }
