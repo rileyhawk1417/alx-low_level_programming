@@ -1,7 +1,7 @@
 #include "main.h"
 #include <stdio.h>
 
-/*
+/**
  * print_array - Entry point
  * @a: Int value
  * @n: Int value
@@ -9,13 +9,15 @@
  * Description: The function takes array & number then
  * returns the array elements
  */
-void print_array(int *a, int n) {
-  int x = 0;
-  int y = 0;
-  for (x = 0; x < n - 1; x++) {
-    printf("%d, ", *(a + x));
-    y = x;
-  }
-  printf("%d", a[y + 1]);
-  printf("\n");
+void print_array(int *a, int n)
+{
+int x = 0;
+int y = 0;
+for (x = 0; x < n - 1; x++)
+{
+printf("%d, ", *(a + x));
+y = x;
+}
+printf("%d", a[y + 1]);
+printf("\n");
 }

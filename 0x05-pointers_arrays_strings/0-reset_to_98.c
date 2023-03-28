@@ -1,6 +1,6 @@
 #include "main.h"
 
-/*
+/**
  * reset_to_98 - Entry point
  * @n: Int value
  * Return: returns an int
