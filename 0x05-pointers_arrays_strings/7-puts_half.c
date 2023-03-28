@@ -1,4 +1,5 @@
 #include "main.h"
+#include <string.h>
 
 /**
  * puts_half - Entry point
@@ -10,7 +11,7 @@ void puts_half(char *str)
 {
 int x = 0, y = 0;
 
-if (str != "")
+if (strcmp("", str) != 0)
 {
 while (str[x] != '\0')
 {
