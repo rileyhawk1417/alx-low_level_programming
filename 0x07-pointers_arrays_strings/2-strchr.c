@@ -12,16 +12,23 @@
  */
 char *_strchr(char *s, char c)
 {
-int i = 0;
-char *filtered;
-while (s[i] != '\0')
+char *query = &c;
+/* Tried Setting this to '\0', still getting 'nil' */
+/* Similar to finding a needle in a haystack function */
+if (!*query)
 {
-filtered = s;
-if (filtered[i] == c)
+return (query);
+}
+else
 {
-return (filtered);
+while (*s != '\0')
+{
+if (*s == c)
+{
+return (s);
 }
 s++;
+}
 }
 return (NULL);
 }

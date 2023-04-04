@@ -12,18 +12,11 @@
  */
 unsigned int _strspn(char *s, char *accept)
 {
-int stringA = 0, stringB = 0, x = 0, y = 0, counter = 0;
-stringA = strlen(s);
-stringB = strlen(accept);
-for (x = 0; x < stringA; x++)
-{
-for (y = 0; y < stringB; y++)
-{
-if (s[y] == accept[x])
+unsigned int counter = 0;
+/* Best to use in-built functions for this */
+while (*s && strchr(accept, *s++))
 {
 counter++;
 }
-}
-}
-return (counter + 1);
+return (counter);
 }
