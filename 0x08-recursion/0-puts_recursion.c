@@ -11,17 +11,20 @@
  */
 void _puts_recursion(char *s)
 {
-int x = 0, length = strlen(s);
+int x = 0;
 
+if (s[x] != '\0')
+{
 _putchar(s[x]);
 x++;
-if (x > length)
-{
-return;
-}
-
 /* If you wonder why there's a 1 remove it & see what happens */
 _puts_recursion(s + 1);
+}
+else
+{
+_putchar('\n');
+}
+
 
 /*
  * By the way this other format also works
