@@ -20,6 +20,7 @@ if (size == 0)
 return (NULL);
 }
 
+str = (char *)malloc(sizeof(char) * size);
 /* NOTE: If malloc fails return null */
 if (!str)
 {
@@ -33,7 +34,6 @@ if (c != ' ')
  * (char*) malloc(sizeof(char)*size); works
  * Though looking into sprintf() is an option
  */
-str = (char *)malloc(sizeof(char) * size);
 for (i = 0; i < size; i++)
 {
 str[i] = c;
