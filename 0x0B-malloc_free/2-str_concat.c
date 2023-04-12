@@ -27,15 +27,22 @@ if (value == NULL)
 {
 return (NULL);
 }
+
+if (s1 != NULL)
+{
 for (i = 0; i < size1; i++)
 {
 value[i] = s1[i];
 }
+}
 
+if (s2 != NULL)
+{
 for (i = size1; i < size; i++)
 {
 value[i] = s2[z];
 z++;
+}
 }
 value[size - 1] = '\0';
 
