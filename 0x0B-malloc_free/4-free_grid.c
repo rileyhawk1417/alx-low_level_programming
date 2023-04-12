@@ -10,4 +10,14 @@
  * Description: The function frees up the grid
  * called by another function
  */
-void free_grid(int **grid, int height) { free(grid[height]); }
+void free_grid(int **grid, int height)
+{
+if (grid != NULL && height != 0)
+{
+for (; height >= 0; height--)
+{
+free(grid[height]);
+}
+free(grid);
+}
+}
