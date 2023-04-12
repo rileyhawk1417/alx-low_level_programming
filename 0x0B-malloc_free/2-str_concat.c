@@ -12,10 +12,17 @@
  */
 char *str_concat(char *s1, char *s2)
 {
-int size1 = strlen(s1), size2 = strlen(s2), i = 0;
+int size = 0, size1 = 0, size2 = 0, i = 0;
 int z = 0;
 char *value;
-int size = (size1 + size2) + 1;
+
+if (s1 != NULL)
+size1 = strlen(s1);
+
+if (s2 != NULL)
+size2 = strlen(s2);
+
+size = (size1 + size2 + 1);
 value = (char *)malloc(sizeof(char) * size);
 
 if (value == NULL)
@@ -33,7 +40,7 @@ value[i] = s1[i];
 
 if (s2 != NULL)
 {
-for (i = size1; i < size; i++)
+for (; i < size; i++)
 {
 value[i] = s2[z];
 z++;
@@ -43,3 +50,5 @@ value[size - 1] = '\0';
 
 return (value);
 }
+
+
