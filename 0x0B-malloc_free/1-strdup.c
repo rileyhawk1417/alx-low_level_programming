@@ -20,7 +20,11 @@ if (str == NULL)
 return (NULL);
 }
 
-value = malloc(sizeof(char) * size);
+value = (char *)malloc(sizeof(char) * size);
+if (value == NULL)
+{
+return (NULL);
+}
 for (i = 0; i < size; i++)
 {
 value[i] = str[i];
