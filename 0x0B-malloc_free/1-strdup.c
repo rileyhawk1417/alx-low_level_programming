@@ -13,7 +13,6 @@
 char *_strdup(char *str)
 {
 int size = 0, i = 0;
-int x = 0;
 char *value;
 
 if (str == NULL)
@@ -21,13 +20,15 @@ if (str == NULL)
 return (NULL);
 }
 
-while (str[x] != '\0')
+while(str[i] != '\0')
 {
 size++;
-if (str[x] == '\0')
+
+if (str[i] == '\0')
 {
-		break;
+break;
 }
+i++;
 }
 
 value = (char *)malloc(sizeof(char) * size);
@@ -35,6 +36,7 @@ if (value == NULL)
 {
 return (NULL);
 }
+
 for (i = 0; i < size; i++)
 {
 value[i] = str[i];
