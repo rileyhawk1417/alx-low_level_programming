@@ -31,7 +31,7 @@ break;
 i++;
 }
 
-value = ((char *)malloc(sizeof(char) * size) + 1);
+value = (char *)malloc(sizeof(char) * size);
 if (value == NULL)
 {
 return (NULL);
