@@ -18,11 +18,6 @@ char *value;
 int size = (size1 + size2) + 1;
 value = (char *)malloc(sizeof(char) * size);
 
-if (s1 == NULL || s2 == NULL)
-{
-return (NULL);
-}
-
 if (value == NULL)
 {
 return (NULL);
