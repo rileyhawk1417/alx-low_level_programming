@@ -20,7 +20,7 @@ if (str == NULL)
 return (NULL);
 }
 
-while(str[i] != '\0')
+while (str[i] != '\0')
 {
 size++;
 
@@ -28,10 +28,9 @@ if (str[i] == '\0')
 {
 break;
 }
-i++;
 }
 
-value = (char *)malloc(sizeof(char) * size);
+value = (char *)malloc(sizeof(char) * (size + 1));
 if (value == NULL)
 {
 return (NULL);
