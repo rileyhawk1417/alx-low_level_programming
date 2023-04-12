@@ -31,7 +31,7 @@ for (i = 0; i < height; i++)
 value[i] = malloc(sizeof(int) * width);
 if (value[i] == NULL)
 {
-for (i--; i>=0; i--)
+for (i--; i >= 0; i--)
 {
 free(value[i]);
 }
