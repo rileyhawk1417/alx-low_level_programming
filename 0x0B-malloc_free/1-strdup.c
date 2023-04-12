@@ -12,12 +12,22 @@
  */
 char *_strdup(char *str)
 {
-int size = strlen(str), i = 0;
+int size = 0, i = 0;
+int x = 0;
 char *value;
 
 if (str == NULL)
 {
 return (NULL);
+}
+
+while (str[x] != '\0')
+{
+size++;
+if (str[x] == '\0')
+{
+		break;
+}
 }
 
 value = (char *)malloc(sizeof(char) * size);
