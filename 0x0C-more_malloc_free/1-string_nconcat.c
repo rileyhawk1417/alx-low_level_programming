@@ -52,6 +52,6 @@ z++;
 }
 }
 
-combined[size - 1] = '\0';
+combined[i] = '\0';
 return (combined);
 }
