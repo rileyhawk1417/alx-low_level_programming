@@ -14,11 +14,24 @@
  */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-int s1Len = strlen(s1);
-int s2Len = strlen(s2);
-int size = 0, i = 0, z = 0;
+int s1Len = 0;
+int s2Len = 0;
+int size = 0, i = 0, z = 0, x = 0, y = 0;
 int len = n;
 char *combined;
+
+while (s1[x] != '\0')
+{
+		x++;
+}
+
+while (s2[y] != '\0')
+{
+		y++;
+}
+
+s1Len = x;
+s2Len = y;
 
 combined = malloc((s1Len + s2Len + 1));
 
@@ -26,6 +39,7 @@ if (combined == NULL)
 {
 return (NULL);
 }
+
 
 if (s1 != NULL)
 {
