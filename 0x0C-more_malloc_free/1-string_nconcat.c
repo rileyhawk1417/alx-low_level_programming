@@ -33,7 +33,9 @@ while (s2[y] != '\0')
 s1Len = x;
 s2Len = y;
 
-combined = malloc((s1Len + s2Len + 1));
+size = (s1Len + s2Len + 1);
+
+combined = malloc(size);
 
 if (combined == NULL)
 {
