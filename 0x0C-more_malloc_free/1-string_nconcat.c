@@ -15,7 +15,7 @@
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 unsigned int s1Len = 0, s2Len = 0;
-unsigned int size = 0, i = 0, z = 0;
+unsigned int size = 0, i = 0, z = 0, j = 0;
 char *combined;
 
 if (s1 != NULL)
@@ -23,13 +23,16 @@ while (s1[s1Len] != '\0')
 s1Len++;
 
 if (s2 != NULL)
-while (s2[s2Len] != '\0')
+{
+while (s2[j] != '\0')
+{
+if (j < n)
 s2Len++;
+j++;
+}
+}
 
-if (n >= s2Len)
-size = s1Len + s2Len + 1;
-else
-size = n + s1Len + 1;
+size = (s1Len + s2Len + 1);
 
 combined = malloc(size);
 
@@ -39,9 +42,8 @@ return (NULL);
 for (i = 0; i < s1Len; i++)
 combined[i] = s1[i];
 
-for (z = 0; z < s2Len; i++)
+for (z = 0; z < s2Len; i++, z++)
 combined[i] = s2[z];
-z++;
 
 combined[i] = '\0';
 return (combined);
