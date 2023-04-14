@@ -14,60 +14,35 @@
  */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-int s1Len = 0;
-int s2Len = 0;
-int size = 0, i = 0, z = 0, x = 0, y = 0;
-int len = n;
+unsigned int s1Len = 0, s2Len = 0;
+unsigned int size = 0, i = 0, z = 0;
 char *combined;
 
-while (s1[x] != '\0')
-{
-		x++;
-}
+if (s1 != NULL)
+while (s1[s1Len] != '\0')
+s1Len++;
 
-while (s2[y] != '\0')
-{
-		y++;
-}
+if (s2 != NULL)
+while (s2[s2Len] != '\0')
+s2Len++;
 
-s1Len = x;
-s2Len = y;
-
-size = (s1Len + s2Len + 1);
+if (n >= s2Len)
+size = s1Len + s2Len + 1;
+else
+size = n + s1Len + 1;
 
 combined = malloc(size);
 
 if (combined == NULL)
-{
 return (NULL);
-}
 
-
-if (s1 != NULL)
-{
 for (i = 0; i < s1Len; i++)
-{
 combined[i] = s1[i];
-}
-}
 
-if (s2 != NULL)
-{
-if (len >= s2Len)
-{
-size = s1Len + s2Len + 1;
-}
-else
-{
-size = len + s1Len + 1;
-}
-for (; i < size; i++)
-{
+for (z = 0; z < s2Len; i++)
 combined[i] = s2[z];
 z++;
-}
-}
 
-combined[size - 1] = '\0';
+combined[i] = '\0';
 return (combined);
 }
