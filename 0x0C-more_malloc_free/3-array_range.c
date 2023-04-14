@@ -15,6 +15,11 @@ int *ray;
 int i = 0, x = 0;
 int memalloc = 0;
 
+if (min > max)
+{
+return (NULL);
+}
+
 /*
  * NOTE:
  * Necessary to avoid error of sysmalloc.
@@ -24,12 +29,6 @@ memalloc = max - min + 1;
 ray = malloc(sizeof(int) * memalloc);
 if (ray == NULL)
 {
-return (NULL);
-}
-
-if (min > max)
-{
-free(ray);
 return (NULL);
 }
 
