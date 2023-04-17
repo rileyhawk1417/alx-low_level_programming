@@ -1,9 +1,18 @@
 #ifndef DOG_H
 #define DOG_H
-typedef struct dog {
-  char *name;
-  float age;
-  char *owner;
+
+/**
+* struct dog - dog type: which has the following elements
+* @name: char value
+* @age: float value
+* @owner: char value
+* Description: The struct has details about the dog
+*/
+typedef struct dog
+{
+char *name;
+float age;
+char *owner;
 } dog_t;
 
 /*
