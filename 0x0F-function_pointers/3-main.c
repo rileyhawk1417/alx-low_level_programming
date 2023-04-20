@@ -25,7 +25,6 @@ a = atoi(argv[1]);
 b = atoi(argv[3]);
 operator = argv[2];
 
-value = get_op_func(operator)(a, b);
 /* Test case for get_op_func & first input */
 if (get_op_func(operator) == NULL || operator[1] != '\0')
 {
@@ -40,6 +39,7 @@ printf("Error\n");
 exit(100);
 }
 
+value = get_op_func(operator)(a, b);
 
 printf("%d\n", value);
 return (0);
