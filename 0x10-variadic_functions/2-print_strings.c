@@ -13,33 +13,41 @@
  */
 void print_strings(const char *separator, const unsigned int n, ...)
 {
-
-int i = 0, size = 0;
+int i = 0, size = n;
 char *res;
 va_list list;
 va_start(list, n);
-
-if (separator == NULL)
-{
-return;
-}
-
-size = n;
+/*NOTE: Nesting For loops is nasty x_x */
 for (i = 0; i < size; i++)
 {
-if (i != 0)
-{
-printf("%s", separator);
-}
-
 res = va_arg(list, char *);
 if (res == NULL)
 {
-return;
+if (i == (size - 1))
+{
+printf("(nil)");
+break;
 }
+
+if (separator == NULL)
+	printf("(nil)");
+
+else
+	printf("(nil)%s", separator);
+}
+
 else
 {
+if (i == (size - 1))
+{
 printf("%s", res);
+break;
+}
+
+if (separator == NULL)
+	printf("%s", res);
+else
+	printf("%s%s", res, separator);
 }
 }
 va_end(list);
