@@ -17,21 +17,28 @@ int res = 0, i = 0, size = 0;
 va_list list;
 va_start(list, n);
 
-if (separator == NULL)
-{
-return;
-}
 
 size = n;
 for (i = 0; i < size; i++)
 {
-if (i != 0)
-{
-printf("%s", separator);
-}
 
 res = va_arg(list, int);
+
+/* NOTES: This will remove last value which could be NULL */
+if (i == (size - 1))
+{
 printf("%d", res);
+break;
+}
+
+if (separator == NULL)
+{
+printf("%d", res);
+}
+else
+{
+printf("%d%s", res, separator);
+}
 }
 va_end(list);
 printf("\n");
