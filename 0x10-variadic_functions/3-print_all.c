@@ -38,16 +38,16 @@ case 's':
 	s = va_arg(args, char *);
 	if (!s)
 	{
-		printf("(nil)");/* yes am lazy to use putchar on this one */
+		printf("(nil)");
 		break;
 	}
 	printf("%s", s), state = 1;
 	break;
 case 'i':
-	putchar(va_arg(args, int) + '0'), state = 1;
+	printf("%d", va_arg(args, int)), state = 1;
 	break;
 case 'f':
-	putchar(va_arg(args, double) + '0'), state = 1;
+	printf("%f", va_arg(args, double)), state = 1;
 	break;
 } i++;
 }
