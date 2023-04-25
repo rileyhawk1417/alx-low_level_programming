@@ -9,7 +9,7 @@
 * Description: Similar to printf function '%' is not used
 */
 /*NOTE:Since there are no '%' for modifiers we have to manually*/
-/*set the state to 1 when printing. To build printf use conditions for state*/
+/*set escape state to 1 to print. To build printf use conditions for state*/
 void print_all(const char *const format, ...)
 {
 int i = 0, x, state = 0;
