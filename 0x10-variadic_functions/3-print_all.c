@@ -36,7 +36,7 @@ case 'c':
 	break;
 case 's':
 	s = va_arg(args, char *);
-	while (!s)
+	if (!s)
 	{
 		printf("(nil)");/* yes am lazy to use putchar on this one */
 		break;
