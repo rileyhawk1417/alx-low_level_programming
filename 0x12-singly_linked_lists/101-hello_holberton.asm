@@ -19,5 +19,5 @@ xor rdi, rdi          ; return 0
 syscall
 
 section .data
-message: db 'Hello, Holberton!',0Ah,0Dh ; message & newline
+message: db 'Hello, Holberton',0x0A ; message & newline 0Dh(new line)
 length: equ $-message ;NOTE: This is how nasm reads the instruction kids
