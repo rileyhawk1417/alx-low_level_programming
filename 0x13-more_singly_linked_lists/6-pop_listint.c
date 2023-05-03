@@ -11,7 +11,7 @@ int pop_listint(listint_t **head)
 listint_t *target;
 int value = 0;
 
-if (head != NULL)
+if (*head != NULL)
 {
 target = *head;
 value = (*head)->n;
@@ -19,5 +19,5 @@ value = (*head)->n;
 free(target);
 return (value);
 }
-return (0);
+return (value);
 }

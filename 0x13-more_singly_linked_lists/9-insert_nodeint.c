@@ -17,14 +17,16 @@ prevNode = *head;
 if (nextNode == NULL)
 	return (0);
 
+nextNode->n = n;
 if (idx == 0)
 {
-nextNode->next = prevNode;
+nextNode->n = n;
+nextNode->next = *head;
 *head = nextNode;
 return (nextNode);
 }
 
-while (count < idx)
+while (count < (idx - 1))
 {
 if (prevNode == NULL || prevNode->next == NULL)
 	return (NULL);
@@ -33,7 +35,6 @@ prevNode = prevNode->next;
 count++;
 }
 
-nextNode->n = n;
 nextNode->next = prevNode->next;
 prevNode->next = nextNode;
 
