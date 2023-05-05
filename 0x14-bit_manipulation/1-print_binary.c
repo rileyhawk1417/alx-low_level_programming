@@ -12,6 +12,7 @@ void print_binary(unsigned long int n)
 {
 if (!n)
 {
+_putchar((n & 0) + '0');
 return;
 }
 

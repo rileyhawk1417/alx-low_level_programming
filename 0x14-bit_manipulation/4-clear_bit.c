@@ -9,27 +9,18 @@
  */
 int clear_bit(unsigned long int *n, unsigned int index)
 {
-int fail = -1, res;
+int code = -1, res;
 /* NOTE: we are avoiding any numbers above 64 */
 /* NOTE: when dealing with bases avoid above 64 */
 if (index > 64)
 {
-return (fail);
+return (code);
 }
 /* NOTE: manually unset & set 1 on index clearing the value */
 res = 1 << index;
 *n = (*n & ~res);
+code = 1;
 
-/* NOTE: checks for default case */
-if ((*n & 1) == 1)
-{
-return (1);
-}
 
-else
-{
-return (0);
-}
-
-return (fail);
+return (code);
 }

@@ -7,7 +7,7 @@
  * Description: This function takes in a value & bit
  * then flips the value using the given bit.
  */
-int flip_bits(unsigned long int n, unsigned int m)
+int flip_bits(unsigned long int n, unsigned long int m)
 {
 int count = 0, res = 0;
 unsigned long int value;
