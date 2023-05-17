@@ -11,18 +11,26 @@
  */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-int fd, size;
+int fd, input_count, output_count;
 char *characters = (char *)malloc(letters);
+if (characters == NULL)
+	return (0);
 fd = open(filename, O_RDONLY);
 if (fd < 0)
 {
-perror("r1");
-exit(1);
-}
-size = read(fd, characters, letters);
-write(1, characters, letters);
-close(fd);
 free(characters);
+return (0);
+}
 
-return (size);
+input_count = read(fd, characters, letters);
+output_count = write(1, characters, input_count);
+close(fd);
+if (output_count < 0)
+{
+free(characters);
+return (0);
+}
+
+free(characters);
+return (output_count);
 }
