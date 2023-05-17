@@ -13,16 +13,23 @@
  */
 int append_text_to_file(const char *filename, char *text_content)
 {
-FILE *file;
+int result = 1, stringLen = 0, output_length, fd;
+if (filename == NULL)
+	result = -1;
 
-char *buffer = malloc(sizeof(text_content));
-file = fopen(filename, "a+");
+fd = open(filename, O_WRONLY | O_APPEND);
+if (fd < 0)
+	result = -1;
 
-while (!feof(file))
+if (text_content)
 {
-fgets(buffer, sizeof(buffer), file);
-fprintf(file, "%s", text_content);
+stringLen = strlen(text_content);
+output_length = write(fd, text_content, stringLen);
+if (output_length != stringLen)
+	result = -1;
 }
 
-return (0);
+close(fd);
+
+return (result);
 }
