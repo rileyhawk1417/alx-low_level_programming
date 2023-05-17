@@ -29,13 +29,13 @@ dest = open(argv[2], O_CREAT | O_WRONLY, 0664);
 read_file = read(src, buffer, BUFSIZ);
 if (read_file < 0)
 {
-dprintf(STDERR_FILENO, "Error: Can't read from  file %s\n", argv[1]);
+dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
 exit(98);
 }
 writeDest = write(dest, buffer, read_file);
 if (dest < 0 || writeDest != read_file)
 {
-dprintf(STDERR_FILENO, "Error: Can't write to  file %s\n", argv[2]);
+dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
 close(src);
 exit(99);
 }
