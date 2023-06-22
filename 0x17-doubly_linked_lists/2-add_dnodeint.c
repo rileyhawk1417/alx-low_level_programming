@@ -23,13 +23,15 @@ newNode->prev = NULL;
 start = *head;
 
 if (start != NULL)
+{
 	while (start->prev != NULL)
 		start = start->prev;
+}
 
 newNode->next = *head;
 if (start != NULL)
 	start->prev = newNode;
 *head = newNode;
 
-return (start);
+return (newNode);
 }
