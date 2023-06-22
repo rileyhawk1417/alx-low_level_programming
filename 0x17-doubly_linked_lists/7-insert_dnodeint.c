@@ -20,6 +20,11 @@ newNode = malloc(sizeof(dlistint_t));
 if (newNode == NULL)
 	return (NULL);
 
+if (idx == 0)
+	newNode = add_dnodeint(h, n);
+else
+{
+
 if (head != NULL)
 	while (head->prev != NULL)
 	{
@@ -41,6 +46,7 @@ head->next->prev = newNode;
 head->next = newNode;
 
 break;
+}
 }
 
 head = head->next;
