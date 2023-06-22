@@ -10,7 +10,7 @@
  */
 size_t print_dlistint(const dlistint_t *h)
 {
-size_t value = 0;
+int value = 0;
 if (h == NULL)
 	return (value);
 
@@ -19,8 +19,7 @@ while (h->prev != NULL)
 
 while (h != NULL)
 {
-	printf("%u\n", h->n);
-
+	printf("%d\n", h->n);
 	value++;
 	h = h->next;
 }
