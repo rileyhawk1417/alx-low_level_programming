@@ -39,11 +39,14 @@ if (count == idx)
 if (head->next == NULL)/*NOTE: Add after the current node */
 	newNode = add_dnodeint_end(h, n);
 
+else
+{
 newNode->n = n;
 newNode->prev = head;
 newNode->next = head->next;
 head->next->prev = newNode;
 head->next = newNode;
+}
 
 break;
 }
