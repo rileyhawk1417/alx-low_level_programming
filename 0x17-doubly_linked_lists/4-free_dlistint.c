@@ -18,7 +18,7 @@ if (head != NULL)
 
 while (node != NULL)
 {
-	node = node->next;
+	head = head->next;
 	free(node);
 }
 
