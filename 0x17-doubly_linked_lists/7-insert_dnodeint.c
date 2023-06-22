@@ -52,10 +52,10 @@ head->next = newNode;
 
 break;
 }
-}
 
 head = head->next;
 count++;
+}
 }
 return (newNode);
 }
