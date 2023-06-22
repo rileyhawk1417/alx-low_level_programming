@@ -23,20 +23,17 @@ else
 {
 head = *h;
 count = 1;
-
 if (head != NULL)
 	while (head->prev != NULL)
 	{
 		head = head->prev;
 	}
-
 while (head != NULL)
 {
 if (count == idx)
 {
 if (head->next == NULL)/*NOTE: Add after the current node */
 	newNode = add_dnodeint_end(h, n);
-
 else
 {
 newNode = malloc(sizeof(dlistint_t));
@@ -49,10 +46,8 @@ head->next->prev = newNode;
 head->next = newNode;
 }
 }
-
 break;
 }
-
 head = head->next;
 count++;
 }
