@@ -147,7 +147,8 @@ index_key = key_index((const unsigned char *)key, ht->size);
 if (index_key >= ht->size)
 	return (NULL);
 
-hash_node = ht->shead;
+hash_node = ht->array[index_key];
+
 while (hash_node != NULL && strcmp(hash_node->key, key) != 0)
 	hash_node = hash_node->next;
 
