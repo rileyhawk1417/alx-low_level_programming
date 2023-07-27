@@ -148,7 +148,7 @@ if (index_key >= ht->size)
 	return (NULL);
 
 hash_node = ht->shead;
-while (hash_node != NULL && strcmp(hash_node->key, key) == 0)
+while (hash_node != NULL && strcmp(hash_node->key, key) != 0)
 	hash_node = hash_node->next;
 
 return ((hash_node == NULL) ? NULL : hash_node->value);
@@ -195,7 +195,7 @@ shash_node_t *hash_node;
 if (ht == NULL)
 	return;
 
-hash_node = ht->shead;
+hash_node = ht->stail;
 printf("{");
 while (hash_node != NULL)
 {
