@@ -30,7 +30,7 @@ if (ht->array == NULL)
 	return (NULL);
 
 for (counter = 0; counter < size; counter++)
-	ht->array[counter] == NULL;
+	ht->array[counter] = NULL;
 
 ht->shead = NULL;
 ht->stail = NULL;
