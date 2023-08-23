@@ -1,0 +1,9 @@
+#
+# Make file to compile Program
+# With all rule
+#
+school: main.c school.c m.h
+	gcc -o school main.c school.c
+
+all : school
+.PHONY : all
