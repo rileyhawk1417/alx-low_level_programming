@@ -1,0 +1,16 @@
+#
+# Make file to compile Program
+# With all rule
+#
+CC = gcc
+SRC = main.c school.c
+OBJ = main.o school.o
+NAME = school
+
+all : $(OBJ)
+	$(CC) $(OBJ) -o $(NAME)
+
+school: $(SRC) m.h
+	$(CC) $(SRC) -c 
+
+.PHONY : all
